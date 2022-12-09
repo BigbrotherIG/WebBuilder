@@ -1,0 +1,33 @@
+
+
+@media screen and (max-width: 768px) {
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+   
+    body {
+        font-weight: 400;
+    }
+
+    .main-header nav {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        font-size: 30px;
+    }
+
+    .main-header nav ul {
+        display: none;
+    }
+    .main-header nav::before,
+    .main-header nav::after{
+        content: " ";
+        display: block;
+        /* position: absolute; */
+    }
+
+}

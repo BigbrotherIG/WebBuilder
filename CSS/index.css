@@ -1,0 +1,368 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Fredoka&family=Ubuntu&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* text colors */
+    --dark-text: #333;
+    --light-text: #fff;
+}
+
+body {
+    font-family: "lato", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    /* line-height: 2em; */
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+img {
+    object-fit: fill;
+}
+
+/* Header Section */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 10px;
+    background-color: #03021fc2;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items:  center;
+}
+
+.main-header .logo{
+    color: #31da1bec;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    margin-left: 10px;
+    list-style-type: none;
+}
+
+/* nav ul {
+    border-bottom: 2.5px solid #fff;
+    border-radius: 2px;
+}
+*/
+
+nav ul  li a:hover{
+    border-bottom: 2.5px solid #fff;
+    border-radius: 2px;
+}
+/* End of Header Section */
+
+/* Main Section */
+.container {
+    background-image: url('../images/pexels-1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: fill;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation-delay: 3s;
+    transition-delay: 2s;
+}
+
+.container:hover {
+    animation-name: containDiv;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: 5;
+    animation-fill-mode: both;
+}
+
+@keyframes containDiv {
+    0% {
+        background-image: url("../images/pexels-1.jpg");
+    }
+    
+    100% {
+        background-image: url("../images/codingbg.jpg");
+    }
+}
+/* 
+.container::before, 
+.container::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    tra
+    nsform: skewY(-3deg);
+} */
+
+.container h1, .container h2  {
+    text-align: center;
+    padding-top: 10px;
+    font-family: "ubuntu" sans-serif;
+}
+
+.container h1:hover, .container h2:hover {
+    padding-top: 10px;
+    transform: scale(.95);
+}
+/* End of Main Section */
+
+/* About Section */
+#about {
+    margin: 200px 25px;
+}
+
+.showcase {
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    height: 50vh;
+}
+
+.showcase .showcase-text {
+    margin: 10px;
+    padding: 10px;
+}
+
+.showcase-text h1 {
+    text-align: center;
+}
+
+.showcase .grid-3 {
+    margin: 20px auto;
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 25vh;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-3 .item {
+    margin: 0 auto;
+}
+/* End of About Section */
+
+/* Services Section */
+#services {
+    margin: 150px 0;
+}
+
+.services-container {
+    background-image: linear-gradient(46deg, #555, rgb(69, 81, 189));
+    height: 100vh;
+    width: 100%;
+}
+
+.services-container .services-text {
+    font-family: 'Ubuntu', sans-serif;
+    padding: 10px;
+}
+
+.services-text h1 {
+    text-align: center;
+}
+
+.services-grid2 {
+    margin: 20px auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.reviews-images {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    max-width: 70%;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+
+.reviews-images img{
+    margin: 20px auto;
+    height: 70px;
+    width: 70px;
+    border-radius: 35px;
+}
+
+.reviews-images p {
+    text-align: center;
+    padding: 10px;
+}
+/* End of Services Section */
+
+/* Contact Section */
+#contact {
+    margin: 150px auto;
+}
+
+.contact-container {
+    background-color: #f4f4f4;
+    width: 100%;
+    height: 100vh;
+}
+
+.contact-container .contact-text {
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.contact-text h1 {
+    text-align: center;
+}
+
+.contact-form {
+    background-image: linear-gradient(45deg, rgba(12, 4, 46, 0.623), #00f, rgb(68, 0, 255));
+    /* background-color: #fff; */
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+    align-items: center;
+    /* flex-direction: column; */
+    height: 75vh;
+}
+
+.contact-form .form-container  {
+    padding: 40px 50px 80px;
+    border: 1.5px solid #f4f4f4;
+    background-color: #f0fff0;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.form-container p {
+    text-align: left;
+}
+
+.form-container .input-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-end ;
+    padding: 10px;
+}
+
+.input-div input {
+    outline: none;
+    border: 1.5px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.input-div input[type="submit"] {
+    border-radius: 20px;
+    background-color: rgb(8, 0, 0);
+    color: #fff;
+}
+
+.input-div input[type="submit"]:hover {
+    transform: scale(1.1);
+    border: 2px solid #fff;
+}
+
+.input-div textarea {
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+}
+/* End of Contact Section */
+
+/* Footer Section */
+.footer-container {
+    background-color: #000;
+    width: 100%;
+    height: 30vh;
+    color: var(--light-text);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.footer-text h1{
+    text-align: center;   
+}
+
+.footer-text p {
+    margin: 5px;
+}
+
+.footer-text .logo {
+    color:  #31da1bec;
+}
+
+.footer-grid2 {
+    background-color: rgba(187, 14, 14, 0.664);
+    color: #fff;
+    padding: 10px;
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.footer-grid2 .footer-socials {
+    grid-column:  1/3;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-socials div{
+    margin: 0 5px;
+}
+.footer-socials div:hover, .footer-socials div a:hover {
+    color: #00f;
+
+}
+.footer-search {
+    margin:  5px auto;
+}
+
+.footer-search form input {
+    position: relative;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 5px;
+    max-width: 100%;
+    width: 300px;
+    padding: 5px;
+}
+
+.footer-search form i {
+    position: absolute;
+    right: 15px;
+    min-width: 50px;
+    background-color: #00f;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 18px;
+    margin: 6px auto;
+    color: rgb(0, 0, 0);
+}
